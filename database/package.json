@@ -1,0 +1,28 @@
+{
+  "name": "mycaltracker",
+  "version": "1.0.0",
+  "description": "personal calorie tracker",
+  "main": "landing.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tevale92/MyCalTracker.git"
+  },
+  "author": "GR2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tevale92/MyCalTracker/issues"
+  },
+  "homepage": "https://github.com/Tevale92/MyCalTracker#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
