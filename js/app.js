@@ -101,6 +101,7 @@ class CalorieTracker {
       0
     );
 
+    localStorage.setItem('caloriesConsumed', consumed)
     caloriesConsumedEl.innerHTML = consumed;
   }
 
@@ -112,6 +113,7 @@ class CalorieTracker {
       0
     );
 
+    localStorage.setItem('caloriesBurned', burned)
     caloriesBurnedEl.innerHTML = burned;
   }
 

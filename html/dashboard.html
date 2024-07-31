@@ -7,6 +7,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -15,6 +17,19 @@
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>MyCalTracker</title>
+    <style>
+      .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .calendar-header button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <header
@@ -22,70 +37,35 @@
     >
       <h1>My Calorie Tracker</h1>
       <div>
-        <button id="today" class="btn btn-outline-light">Track Today</button>
+        <button id="track-today" class="btn btn-outline-light" onclick="document.location = 'tracker.html'">Track Today</button>
+        <button id="reset-entries" class="btn btn-outline-light" onclick="resetentries()">Reset All</button>
       </div>
     </header>
 
-    <div>
-        <div>
-            <table>
-              <header>June</header>
-              <tr>
-                <th>Sunday</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
-        </div>
+    <div class="container mt-5">
+      <div class="calendar-header mb-4">
+        <button id="prev-month">&larr;</button>
+        <h1 id="calendar-title" class="text-center mb-0">July 2024 Calorie Tracker</h1>
+        <button id="next-month">&rarr;</button>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body">
+          <!-- JavaScript will generate the calendar rows here -->
+        </tbody>
+      </table>
     </div>
+    
+    <script src="../js/script.js"></script>
   </body>
 </html>
